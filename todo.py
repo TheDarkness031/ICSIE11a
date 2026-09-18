@@ -1,6 +1,9 @@
 tasks = []
 
 def add_task(name):
+    if name in tasks:
+        print(f"Task '{name}' already exists, skipping")
+        return
     tasks.append(name)
 
 def show_tasks():
@@ -24,3 +27,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
